@@ -20,3 +20,25 @@ Route::get('/', function () {
 
     return view('home', compact('saluto', 'user', 'colors'));
 });
+
+Route::get('/about', function () {
+    $team = [
+        [
+            'name' => 'Mattia',
+            'surname' => 'Stangherlin',
+            'email' => 'mattia@gmail.com'
+        ],
+        [
+            'name' => 'Andre',
+            'surname' => 'Rossi',
+            'email' => 'andrea@gmail.com'
+        ],
+        [
+            'name' => 'Marco',
+            'surname' => 'Verdi',
+            'email' => 'marco@gmail.com'
+        ],
+    ];
+
+    return view('about', compact('team'));
+});

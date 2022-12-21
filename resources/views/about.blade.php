@@ -8,19 +8,18 @@
         <title>Laravel primi passi</title>
     </head>
     <body>
-
         <div class="container">
+            <h1>About page</h1>
 
-            <h1>{{ $saluto }} {{ $user }}</h1>
+            @foreach ($team as $member)
+            <div class="box">
+                <h3>Name: {{ $member['name'] }}</h3>
+                <h3>Surname: {{ $member['surname'] }}</h3>
+                <h3>email: {{ $member['email'] }}</h3>
+            </div>
+            @endforeach
 
-            <ul>
-                @foreach ($colors as $color)
-                <li>{{ $color }}</li>
-                @endforeach
-            </ul>
-
-            <a class="btn" href="/about">About</a>
+            <a class="btn" href="/">Home</a>
         </div>
-
     </body>
 </html>
